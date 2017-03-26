@@ -111,7 +111,7 @@ namespace NDimVecManater
             //  単語の絞込
             var ReWords =
                 from word in Words
-                where ( word.Mag < MagAve * 2 && word.Mag < MagAve / 2 )
+                where ( word.Mag < MagAve * 2 && word.Mag > MagAve * 0.5  )
                 select word;
             Words = new List<WordObj>(ReWords);
 
